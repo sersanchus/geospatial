@@ -44,8 +44,8 @@ export class GeoengineController extends Component {
                 offset: offset,
                 limit: limit,
                 total: count,
-                onUpdate: async ({off, lim}) => {
-                    await list.load({lim, off});
+                onUpdate: async ({offset, limit}) => {
+                    await list.load({limit, offset});
                     this.render(true);
                 },
             };
